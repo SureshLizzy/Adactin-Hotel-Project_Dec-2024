@@ -20,6 +20,13 @@ public class SearchHotel_Pojo extends BaseClass {
 	@FindBy(id = "location")
 	private WebElement ddnLocation;
 
+	@FindBy(id = "hotels")
+	private WebElement ddnHotel;
+
+	public WebElement getDdnHotel() {
+		return ddnHotel;
+	}
+
 	public WebElement getDdnLocation() {
 		return ddnLocation;
 	}
@@ -27,6 +34,10 @@ public class SearchHotel_Pojo extends BaseClass {
 	public void searchHotel() {
 		Select s = new Select(getDdnLocation());
 		s.selectByIndex(2);
+		
+		Select s1 = new Select(getDdnHotel());
+		s1.selectByIndex(2);
+		
 	}
 
 }
