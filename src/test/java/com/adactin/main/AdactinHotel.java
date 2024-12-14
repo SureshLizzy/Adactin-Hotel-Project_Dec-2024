@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.baseclass.BaseClass;
 import com.pojo.LoginPojo;
 import com.pojo.LoginPojo_WithoutPageFactory;
+import com.pojo.SearchHotel_Pojo;
 
 public class AdactinHotel extends BaseClass {
 
@@ -28,9 +29,9 @@ public class AdactinHotel extends BaseClass {
 		
 		LoginPojo loginPojo = new LoginPojo(driver);
 		loginPojo.login();
-//		LoginPojo_WithoutPageFactory loginPojo1 = new LoginPojo_WithoutPageFactory(driver);
-//		loginPojo1.login();
-	//	elementSendKeys(driver.findElement(By.id("username")), getProjectFileValue("username"));
+
+		SearchHotel_Pojo searchHotel_Pojo = new SearchHotel_Pojo(driver);
+		searchHotel_Pojo.searchHotel();
 	}
 
 }
